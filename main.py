@@ -86,50 +86,50 @@ def main():
     with st.expander("Order Details"):
         col1, col2, col3 = st.columns(3)
         with col1:
-            voucher_order = st.number_input("Voucher Order", value=0, step=1)
-            percentage_discount = st.number_input("Percentage Discount", value=0.0, format="%.5f")
-            discount = st.number_input("Discount", value=0 , step=1)
-            order_cycle_time = st.number_input("Order Cycle Time (Oct)", value=0.0, format="%.5f")
+            voucher_order = st.number_input("Voucher Order", value=15308, step=1)
+            percentage_discount = st.number_input("Percentage Discount", value=0.043093, format="%.6f")
+            discount = st.number_input("Discount", value=54930124189 , step=1)
+            order_cycle_time = st.number_input("Order Cycle Time (Oct)", value=3.84053, format="%.5f")
         with col2:
-            credit_bnpl_order = st.number_input("Credit BNPL Order", value=0, step=1)
-            voucher_order_free_shipping = st.number_input("Voucher Order Free Shipping", value=0, step=1)
-            shipping_fee = st.number_input("Shipping Fee(IRR)", value=0, step=1)
+            credit_bnpl_order = st.number_input("Credit BNPL Order", value=8203, step=1)
+            voucher_order_free_shipping = st.number_input("Voucher Order Free Shipping", value=6098, step=1)
+            shipping_fee = st.number_input("Shipping Fee(IRR)", value=490000, step=1)
         with col3:
-            share_app_customer = st.number_input("Share App Customer Among Customer", value=0.0, format="%.4f")
-            active_customer_3_month = st.number_input("Active Customer 3 Month", value=0, step=1)
+            share_app_customer = st.number_input("Share App Customer Among Customer", value=0.66, format="%.2f")
+            active_customer_3_month = st.number_input("Active Customer 3 Month", value=2936475, step=1)
 
     # Group 2: Customer Insights
     with st.expander("Customer Insights"):
         col1, col2, col3 = st.columns(3)
         with col1:
-            dk_monthly_atp = st.number_input("DK Monthly ATP Short Tail Item", value=0.0, format="%.3f")
-            oct_avg_past_30_days = st.number_input("Oct Avg Past 30 Days", value=0.0, format="%.8f")
-            campaign_score = st.number_input("Campaign Score", value=0, step=1)
+            dk_monthly_atp = st.number_input("DK Monthly ATP Short Tail Item", value=0.954, format="%.3f")
+            oct_avg_past_30_days = st.number_input("Oct Avg Past 30 Days", value=4.403752, format="%.6f")
+            campaign_score = st.number_input("Campaign Score", value=3, step=1)
         with col2:
-            new_customer_free_shipping = st.number_input("Is New Customer Free Shipping", value=0, step=1)
+            is_new_customer_free_shipping = st.number_input("Is New Customer Free Shipping", value=0, step=1)
             holiday = st.number_input("Holiday", value=0, step=1)
             holiday_type_count = st.number_input("Holiday Type Count", value=0, step=1)
         with col3:
-            persian_day_number_of_week = st.number_input("Persian Day Number of Week", value=0, step=1)
-            persian_decade_of_month = st.number_input("Persian Decade of Month", value=0, step=1)
-            persian_semester = st.number_input("Persian Semester", value=0, step=1)
+            persian_day_number_of_week = st.number_input("Persian Day Number of Week", value=1, step=1)
+            persian_decade_of_month = st.number_input("Persian Decade of Month", value=3, step=1)
+            persian_semester = st.number_input("Persian Semester", value=1, step=1)
 
     # Group 3: Environmental Factors
     with st.expander("Environmental Factors"):
         col1, col2, col3 = st.columns(3)
         with col1:
-            persian_season = st.number_input("Persian Season", value=0, step=1)
-            persian_month_number = st.number_input("Persian Month Number", value=0, step=1)
+            persian_season = st.number_input("Persian Season", value=2, step=1)
+            persian_month_number = st.number_input("Persian Month Number", value=4, step=1)
             corona = st.number_input("Corona", value=0, step=1)
-            dollar = st.number_input("Dollar", value=0.0, format="%.2f")
+            dollar = st.number_input("Dollar(IRR)", value=575770, step=1)
         with col2:
-            tv = st.number_input("TV", value=0.0, format="%.2f")
-            weather_clear = st.number_input("Is Weather Clear", value=0, step=1)
+            tv = st.number_input("TV", value=0, step=1)
+            is_weather_clear = st.number_input("Is Weather Clear", value=1, step=1)
             return_policy = st.number_input("Return Policy", value=0.0, format="%.2f")
         with col3:
-            plus_subscription = st.number_input("Plus Subscription", value=0.0, format="%.2f")
-            plus_sub_sum = st.number_input("Plus Sub Sum Past 30 Days", value=0.0, format="%.2f")
-            dollar_trend = st.number_input("Dollar Trend", value=0.0, format="%.2f")
+            plus_subscription = st.number_input("Plus Subscription", value=3359, step=1)
+            plus_sub_sum = st.number_input("Plus Sub Sum Past 30 Days", value=80907, step=1)
+            dollar_trend = st.number_input("Dollar Trend", value=0, step=1)
 
 
     # Prediction button
@@ -139,10 +139,10 @@ def main():
             voucher_order, percentage_discount, discount, order_cycle_time,
             credit_bnpl_order, voucher_order_free_shipping, shipping_fee,
             share_app_customer, active_customer_3_month, dk_monthly_atp,
-            oct_avg_past_30_days, campaign_score, new_customer_free_shipping,
+            oct_avg_past_30_days, campaign_score, is_new_customer_free_shipping,
             holiday, holiday_type_count, persian_day_number_of_week,
             persian_decade_of_month, persian_semester, persian_season,
-            persian_month_number, corona, tv, weather_clear,
+            persian_month_number, corona, tv, is_weather_clear,
             return_policy, plus_subscription, plus_sub_sum, dollar_trend, dollar
         ]
 
